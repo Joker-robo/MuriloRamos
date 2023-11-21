@@ -67,11 +67,39 @@ h1{
 .start{
     background-color: lightgreen; 
     left: 40%; 
+    top: 80%; 
+    width: 200px; 
+    height: 50px;
+    font-size: 30px;
+    position: absolute; 
+}
+.pular{
+    background-color: lightgreen; 
+    left: 20%; 
     top: 90%; 
     width: 200px; 
     height: 50px;
     font-size: 30px;
     position: absolute; 
+    opacity: 0;
+}
+.pular:hover{
+    background-color: lightyellow;
+    cursor: pointer;
+}
+.abaixar{
+    background-color: lightgreen; 
+    left: 60%; 
+    top: 90%; 
+    width: 200px; 
+    height: 50px;
+    font-size: 30px;
+    position: absolute;
+    opacity: 0; 
+}
+.abaixar:hover{
+    background-color: lightyellow;
+    cursor: pointer;
 }
 .start:hover{
     background-color: lightyellow;
@@ -333,7 +361,9 @@ h1{
     }
 }
     </style>
-    <input type="button" value="Jogo do Mario" class="start">
+    <input type="button" value="Jogo do Pulo" class="start" onclick="start()">
+    <input type="button" value="Pular" class="pular" onclick="pular()">
+    <input type="button" value="Abaixar" class="abaixar" onclick="abaixar()">
 </head>
 <script>
     var mario = document.querySelector('.mariog');
@@ -464,13 +494,13 @@ h1{
     mario.classList.remove('jump');
     },500)
    }
-   if(t == "s"){
+   else if(t == "s"){
     mario.style.height = 20 + "px"
     setTimeout(() => {
         mario.style.height = 35 + "px"
     },500)
    }
-   else if(start.value =="Jogo do Mario" && t == "Enter"){
+   else if(start.value =="Jogo do Pulo" && t == "Enter"){
     jogo()
     inimigo.style = ".inimigo"
     inimigov.style = ".inimigov"
@@ -535,6 +565,135 @@ h1{
     mario.src = 'https://media.discordapp.net/attachments/876282636526583833/1175933723435352084/download_19.jpg?ex=656d089f&is=655a939f&hm=7c77c5da3033ed16210d2cce0207f108acffc178906f7a168283cda67b5552d0&='
     jogo()
     }
+}
+function start(){
+    var pular = document.querySelector(".pular")
+    var abaixar = document.querySelector(".abaixar")
+    var back = document.querySelector('.game-board');
+    var mario = document.querySelector('.mariog');
+    var inimigo = document.querySelector('.inimigo');
+    var inimigov = document.querySelector('.inimigov');
+    var start = document.querySelector('.start');
+    var inimigo1 = document.querySelector('.inimigo1')
+    var bala0= document.querySelector('.bala0')
+    var bala1= document.querySelector('.bala1')
+    var bala2= document.querySelector('.bala2')
+    var bala3= document.querySelector('.bala3')
+    var balav0= document.querySelector('.balav0')
+    var balav1= document.querySelector('.balav1')
+    var balav2= document.querySelector('.balav2')
+    var balav3= document.querySelector('.balav3')
+    var perda0= document.querySelector('.perda0')
+    var perda1= document.querySelector('.perda1')
+    var perda2= document.querySelector('.perda2')
+    var perda3= document.querySelector('.perda3')
+    var skin0 = document.querySelector('.skin0')
+    var skin1= document.querySelector('.skin1')
+    var skin2= document.querySelector('.skin2')
+    var skin3= document.querySelector('.skin3')
+    var skin4= document.querySelector('.skin4')
+    var moeda= document.querySelector('.moeda')
+    var M = document.querySelector('#a2')
+    var a = document.querySelector('.a')
+    var b = document.querySelector('.b')
+    var c = document.querySelector('.c')
+    var d = document.querySelector('.d')
+    var e = document.querySelector('.e')
+    var f = document.querySelector('.f')
+    var g = document.querySelector('.g')
+    var h = document.querySelector('.h')
+    var i = document.querySelector('.i')
+    var j = document.querySelector('.j')
+    var k = document.querySelector('.k')
+    var l = document.querySelector('.l')
+    var m = document.querySelector('.m1')
+    var n = document.querySelector('.n')
+    var o = document.querySelector('.o')
+    var p = document.querySelector('.p')
+    var q = document.querySelector('.q')
+    var hh = document.querySelector('.hh')
+    var hh1 = document.querySelector(".hh1")
+    if(start.value =='Jogo do Pulo'){
+    jogo()
+    inimigo.style = ".inimigo"
+    inimigov.style = ".inimigov"
+    inimigo1.style = ".inimigo1"
+    back.style.right = 0 + '%'
+    inimigo.style.right = 0 + '%'
+    inimigov.style.right = 0 + '%'
+    inimigo1.style.right = 10 + '%'
+    start.style.opacity = "0"
+    mario.style.left = 0 + '%'
+    pular.style.opacity = "100"
+    abaixar.style.opacity = "100"
+    bala0.style.opacity = "100"
+    bala1.style.opacity = "100"
+    bala2.style.opacity = "100"
+    bala3.style.opacity = "100"
+    balav0.style.opacity = "100"
+    balav1.style.opacity = "100"
+    balav2.style.opacity = "100"
+    balav3.style.opacity = "100"
+    perda0.style.opacity = "100"
+    perda1.style.opacity = "100"
+    perda2.style.opacity = "100"
+    perda3.style.opacity = "100"
+    skin0.style.opacity = "100"
+    skin1.style.opacity = "100"
+    skin2.style.opacity = "100"
+    skin3.style.opacity = "100"
+    skin4.style.opacity = "100"
+    moeda.style.opacity = "100"
+    M.style.opacity = "100"
+    a.style.opacity = "100"
+    b.style.opacity = "100"
+    c.style.opacity = "100"
+    d.style.opacity = "100"
+    e.style.opacity = "100"
+    f.style.opacity = "100"
+    g.style.opacity = "100"
+    h.style.opacity = "100"
+    i.style.opacity = "100"
+    j.style.opacity = "100"
+    k.style.opacity = "100"
+    l.style.opacity = "100"
+    m.style.opacity = "100"
+    n.style.opacity = "100"
+    o.style.opacity = "100"
+    p.style.opacity = "100"
+    q.style.opacity = "100"
+    hh.style.opacity = "0"
+    hh1.style.opacity = "0"
+
+   }
+   else if(start.value == "Restart"){
+    inimigo.style = ".inimigo"
+    inimigo1.style = ".inimigo1"
+    inimigov.style = ".inimigov"
+    back.style.right = 0 + '%'
+    inimigo.style.right = 0 + '%'
+    inimigov.style.right = 0 + '%'
+    inimigo1.style.right = 10 + '%'
+    start.value = 'restart'
+    mario.style = 'mariog'
+    mario.style.left = 0 + '%'
+    mario.src = 'https://media.discordapp.net/attachments/876282636526583833/1175933723435352084/download_19.jpg?ex=656d089f&is=655a939f&hm=7c77c5da3033ed16210d2cce0207f108acffc178906f7a168283cda67b5552d0&='
+    jogo()
+    }
+}
+function pular(){
+    var mario = document.querySelector('.mariog');
+    mario.classList.add('jump');
+    setTimeout(() => {
+    mario.classList.remove('jump');
+    },500)
+}
+function abaixar(){
+    var mario = document.querySelector('.mariog');
+    mario.style.height = 20 + "px"
+    setTimeout(() => {
+        mario.style.height = 35 + "px"
+    },500)
 }
 function preco0(){
     var mario = document.querySelector('.mariog');
